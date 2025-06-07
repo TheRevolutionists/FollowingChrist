@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community - Bible Study Community</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>Bible Study Community</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="study-notes.html">Study Notes</a>
+                <a href="devotionals.html">Daily Devotionals</a>
+                <a href="community.html" class="active">Community</a>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="community-hero">
+            <div class="container">
+                <h1>Community</h1>
+                <p>Join us in fellowship and service</p>
+            </div>
+        </section>
+
+        <section class="events-calendar">
+            <div class="container">
+                <h2>Upcoming Events</h2>
+                <div class="calendar-grid">
+                    <!-- Event 1 -->
+                    <article class="event-card">
+                        <div class="event-date">
+                            <span class="day">25</span>
+                            <span class="month">Mar</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Sunday Bible Study</h3>
+                            <p class="event-time"><i class="far fa-clock"></i> 10:00 AM - 11:30 AM</p>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i> Main Sanctuary</p>
+                            <p class="event-description">Join us for an in-depth study of the Book of Romans.</p>
+                            <a href="#" class="event-link">Learn More</a>
+                        </div>
+                    </article>
+
+                    <!-- Event 2 -->
+                    <article class="event-card">
+                        <div class="event-date">
+                            <span class="day">27</span>
+                            <span class="month">Mar</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Prayer Meeting</h3>
+                            <p class="event-time"><i class="far fa-clock"></i> 7:00 PM - 8:30 PM</p>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i> Prayer Room</p>
+                            <p class="event-description">Come together in prayer and fellowship.</p>
+                            <a href="#" class="event-link">Learn More</a>
+                        </div>
+                    </article>
+
+                    <!-- Event 3 -->
+                    <article class="event-card">
+                        <div class="event-date">
+                            <span class="day">30</span>
+                            <span class="month">Mar</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Community Outreach</h3>
+                            <p class="event-time"><i class="far fa-clock"></i> 9:00 AM - 2:00 PM</p>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i> City Center</p>
+                            <p class="event-description">Join us in serving our local community.</p>
+                            <a href="#" class="event-link">Learn More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="prayer-requests">
+            <div class="container">
+                <h2>Prayer Requests</h2>
+                <div class="prayer-grid">
+                    <div class="prayer-form">
+                        <h3>Submit a Prayer Request</h3>
+                        <form id="prayer-form" onsubmit="return validatePrayerForm(this)">
+                            <div class="form-group">
+                                <label for="name">Your Name (Optional)</label>
+                                <input type="text" id="name" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="request">Prayer Request</label>
+                                <textarea id="request" name="request" rows="4" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" name="anonymous" id="anonymous">
+                                    Submit Anonymously
+                                </label>
+                            </div>
+                            <button type="submit" class="submit-btn">Submit Request</button>
+                        </form>
+                    </div>
+                    <div class="prayer-wall">
+                        <h3>Prayer Wall</h3>
+                        <div class="prayer-cards">
+                            <!-- Prayer Request 1 -->
+                            <div class="prayer-card">
+                                <p class="prayer-text">Praying for healing and strength during this difficult time.</p>
+                                <p class="prayer-meta">Posted by: Anonymous</p>
+                                <div class="prayer-actions">
+                                    <button class="pray-btn"><i class="fas fa-pray"></i> I'm Praying</button>
+                                    <span class="prayer-count">12 people praying</span>
+                                </div>
+                            </div>
+
+                            <!-- Prayer Request 2 -->
+                            <div class="prayer-card">
+                                <p class="prayer-text">Please pray for my family's financial situation.</p>
+                                <p class="prayer-meta">Posted by: John D.</p>
+                                <div class="prayer-actions">
+                                    <button class="pray-btn"><i class="fas fa-pray"></i> I'm Praying</button>
+                                    <span class="prayer-count">8 people praying</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="volunteer-opportunities">
+            <div class="container">
+                <h2>Volunteer Opportunities</h2>
+                <div class="volunteer-grid">
+                    <!-- Opportunity 1 -->
+                    <article class="volunteer-card">
+                        <i class="fas fa-hands-helping"></i>
+                        <h3>Sunday School Teacher</h3>
+                        <p>Help shape young minds by teaching Sunday School classes.</p>
+                        <ul class="volunteer-details">
+                            <li><i class="far fa-clock"></i> Sundays, 9:00 AM - 10:30 AM</li>
+                            <li><i class="fas fa-users"></i> Working with children ages 5-12</li>
+                        </ul>
+                        <a href="#" class="volunteer-btn">Sign Up</a>
+                    </article>
+
+                    <!-- Opportunity 2 -->
+                    <article class="volunteer-card">
+                        <i class="fas fa-utensils"></i>
+                        <h3>Food Bank Volunteer</h3>
+                        <p>Help distribute food to those in need in our community.</p>
+                        <ul class="volunteer-details">
+                            <li><i class="far fa-clock"></i> Saturdays, 9:00 AM - 1:00 PM</li>
+                            <li><i class="fas fa-users"></i> Working with community members</li>
+                        </ul>
+                        <a href="#" class="volunteer-btn">Sign Up</a>
+                    </article>
+
+                    <!-- Opportunity 3 -->
+                    <article class="volunteer-card">
+                        <i class="fas fa-music"></i>
+                        <h3>Worship Team</h3>
+                        <p>Join our worship team to help lead Sunday services.</p>
+                        <ul class="volunteer-details">
+                            <li><i class="far fa-clock"></i> Sundays, 8:00 AM - 12:00 PM</li>
+                            <li><i class="fas fa-users"></i> Working with worship team</li>
+                        </ul>
+                        <a href="#" class="volunteer-btn">Sign Up</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="https://discord.gg/EvhqQCXMRZ" target="_blank"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="study-notes.html">Study Notes</a></li>
+                        <li><a href="devotionals.html">Daily Devotionals</a></li>
+                        <li><a href="community.html">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bible Study Community. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/community.js"></script>
+</body>
+</html> 
