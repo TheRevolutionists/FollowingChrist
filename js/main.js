@@ -4,13 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelector('.nav-links');
 
     mobileMenuBtn.addEventListener('click', () => {
-        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        navLinks.classList.toggle('active');
     });
 
-    // Close mobile menu when clicking outside
+    // Close mobile menu when clicking outside (only if open)
     document.addEventListener('click', (e) => {
-        if (!e.target.closest('.nav-container')) {
-            navLinks.style.display = 'none';
+        if (!e.target.closest('.nav-container') && navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
         }
     });
 });

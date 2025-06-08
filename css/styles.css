@@ -181,7 +181,7 @@ blockquote {
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     transition: transform 0.3s ease;
     border: 1px solid var(--border);
-    color: #18191a !important;
+    color: #fff !important;
 }
 
 .featured-card:hover {
@@ -189,7 +189,15 @@ blockquote {
 }
 
 .featured-card h3 {
-    color: #18191a !important;
+    color: #fff !important;
+}
+
+.featured-card p {
+    color: #fff !important;
+}
+
+.featured-card a {
+    color: #fff !important;
 }
 
 .read-more {
@@ -631,7 +639,7 @@ footer {
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     overflow: hidden;
     margin-top: 2rem;
-    color: #18191a !important;
+    color: #fff !important;
     border: 1px solid var(--border);
 }
 
@@ -751,7 +759,7 @@ footer {
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    color: #18191a !important;
+    color: #fff !important;
     border: 1px solid var(--border);
 }
 
