@@ -62,23 +62,9 @@
                 <div class="prayer-grid">
                     <div class="prayer-form">
                         <h3>Submit a Prayer Request</h3>
-                        <form id="prayer-form" onsubmit="return validatePrayerForm(this)">
-                            <div class="form-group">
-                                <label for="name">Your Name (Optional)</label>
-                                <input type="text" id="name" name="name">
-                            </div>
-                            <div class="form-group">
-                                <label for="request">Prayer Request</label>
-                                <textarea id="request" name="request" rows="4" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label>
-                                    <input type="checkbox" name="anonymous" id="anonymous">
-                                    Submit Anonymously
-                                </label>
-                            </div>
-                            <button type="submit" class="submit-btn">Submit Request</button>
-                        </form>
+                        <div class="embedded-form">
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfBCszQ5MkqHx66hNLI0hMk0HnCsuGDRjY7jNWmbUIq14TYdA/viewform?embedded=true" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                        </div>
                     </div>
                     <div class="prayer-wall">
                         <h3>Prayer Wall</h3>
