@@ -930,6 +930,8 @@ footer {
     background-color: #f8f9fa;
 }
 
+.events-calendar h2 { color: #18191a !important; }
+
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
