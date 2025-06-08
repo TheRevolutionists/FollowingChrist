@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* Global Color Scheme: Black & Greys */
+/* Global Color Scheme: Black & Greys with Pastel Accents */
 :root {
     --primary-bg: #18191a;
     --secondary-bg: #232526;
@@ -13,9 +13,11 @@
     --accent: #444;
     --text-color: #f1f1f1;
     --muted-text: #b0b3b8;
-    --button-bg: #333;
-    --button-hover: #444;
-    --button-text: #fff;
+    --button-bg: #b39ddb; /* pastel lavender */
+    --button-hover: #b2dfdb; /* pastel green */
+    --button-text: #232526;
+    --link-accent: #b39ddb;
+    --link-accent-hover: #b2dfdb;
     --border: #333;
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
@@ -61,7 +63,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--muted-text);
+    color: var(--link-accent);
     margin-left: 2rem;
     font-weight: 500;
     transition: color 0.2s;
@@ -69,7 +71,7 @@ body {
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: #fff;
+    color: var(--link-accent-hover);
 }
 
 .mobile-menu {
@@ -124,7 +126,7 @@ body {
 
 .cta-button:hover {
     background: var(--button-hover);
-    color: #fff;
+    color: var(--button-text);
 }
 
 /* Verse of the Day Section */
@@ -280,20 +282,21 @@ footer {
 
 /* About Page Styles */
 .about-hero {
-    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)),
-                url('../images/about-bg.jpg') center/cover;
-    height: 40vh;
+    background: linear-gradient(rgba(24, 25, 26, 0.7), rgba(24, 25, 26, 0.7)), url('../images/cross-mountains.jpg') no-repeat center center/cover;
+    min-height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--white);
+    color: #fff;
     margin-top: 60px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
 }
 
 .about-hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
 }
 
 .mission-vision {
@@ -390,20 +393,21 @@ footer {
 
 /* Study Notes Page Styles */
 .study-hero {
-    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)),
-                url('../images/study-bg.jpg') center/cover;
-    height: 40vh;
+    background: linear-gradient(rgba(24, 25, 26, 0.7), rgba(24, 25, 26, 0.7)), url('../images/cross-mountains.jpg') no-repeat center center/cover;
+    min-height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--white);
+    color: #fff;
     margin-top: 60px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
 }
 
 .study-hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
 }
 
 .study-content {
@@ -593,20 +597,21 @@ footer {
 
 /* Devotionals Page Styles */
 .devotional-hero {
-    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)),
-                url('../images/devotional-bg.jpg') center/cover;
-    height: 40vh;
+    background: linear-gradient(rgba(24, 25, 26, 0.7), rgba(24, 25, 26, 0.7)), url('../images/cross-mountains.jpg') no-repeat center center/cover;
+    min-height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--white);
+    color: #fff;
     margin-top: 60px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
 }
 
 .devotional-hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
 }
 
 .today-devotional {
@@ -890,19 +895,20 @@ footer {
 
 /* Community Page Styles */
 .community-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/community-hero.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 300px;
+    background: linear-gradient(rgba(24, 25, 26, 0.7), rgba(24, 25, 26, 0.7)), url('../images/cross-mountains.jpg') no-repeat center center/cover;
+    min-height: 300px;
     display: flex;
     align-items: center;
     text-align: center;
-    color: white;
+    color: #fff;
+    margin-top: 60px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
 }
 
 .community-hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
 }
 
 /* Events Calendar Styles */
