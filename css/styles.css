@@ -5,11 +5,21 @@
     box-sizing: border-box;
 }
 
+/* Global Color Scheme: Black & Greys */
 :root {
+    --primary-bg: #18191a;
+    --secondary-bg: #232526;
+    --card-bg: #232526;
+    --accent: #444;
+    --text-color: #f1f1f1;
+    --muted-text: #b0b3b8;
+    --button-bg: #333;
+    --button-hover: #444;
+    --button-text: #fff;
+    --border: #333;
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
     --accent-color: #e74c3c;
-    --text-color: #333;
     --light-bg: #f5f6fa;
     --white: #ffffff;
 }
@@ -18,7 +28,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background: #f6f5f3;
+    background: var(--primary-bg);
 }
 
 .container {
@@ -29,7 +39,7 @@ body {
 
 /* Header and Navigation */
 .main-header {
-    background-color: var(--white);
+    background-color: var(--secondary-bg);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
@@ -51,15 +61,15 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--muted-text);
     margin-left: 2rem;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color 0.2s;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: var(--secondary-color);
+    color: #fff;
 }
 
 .mobile-menu {
@@ -70,7 +80,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(30, 30, 30, 0.5), rgba(30, 30, 30, 0.5)), url('../images/cross-mountains.jpg.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(24, 25, 26, 0.7), rgba(24, 25, 26, 0.7)), url('../images/cross-mountains.jpg') no-repeat center center/cover;
     min-height: 400px;
     display: flex;
     align-items: center;
@@ -78,7 +88,7 @@ body {
     color: #fff;
     text-align: center;
     position: relative;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
 }
 
 .hero-content {
@@ -90,31 +100,31 @@ body {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
 }
 
 .hero-content p {
     font-size: 1.3rem;
     margin-bottom: 2rem;
-    text-shadow: 0 1px 6px rgba(0,0,0,0.4);
+    text-shadow: 0 1px 6px rgba(0,0,0,0.6);
 }
 
 .cta-button {
-    background: #f5d76e;
-    color: #2c3e50;
+    background: var(--button-bg);
+    color: var(--button-text);
     padding: 0.9rem 2.2rem;
     border-radius: 30px;
     font-size: 1.1rem;
     font-weight: 600;
     text-decoration: none;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
     transition: background 0.2s, color 0.2s;
     border: none;
 }
 
 .cta-button:hover {
-    background: #fff;
-    color: #e67e22;
+    background: var(--button-hover);
+    color: #fff;
 }
 
 /* Verse of the Day Section */
@@ -162,11 +172,13 @@ blockquote {
 }
 
 .featured-card {
-    background-color: var(--white);
+    background-color: var(--card-bg);
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     transition: transform 0.3s ease;
+    border: 1px solid var(--border);
+    color: var(--text-color);
 }
 
 .featured-card:hover {
@@ -183,9 +195,10 @@ blockquote {
 
 /* Footer */
 footer {
-    background-color: var(--primary-color);
-    color: var(--white);
+    background-color: var(--secondary-bg);
+    color: var(--muted-text);
     padding: 4rem 0 2rem;
+    border-top: 1px solid var(--border);
 }
 
 .footer-content {
@@ -196,7 +209,7 @@ footer {
 }
 
 .social-links a {
-    color: var(--white);
+    color: var(--text-color);
     font-size: 1.5rem;
     margin-right: 1rem;
     transition: color 0.3s ease;
@@ -215,7 +228,7 @@ footer {
 }
 
 .footer-section ul li a {
-    color: var(--white);
+    color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -601,11 +614,13 @@ footer {
 }
 
 .devotional-card {
-    background-color: var(--white);
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     overflow: hidden;
     margin-top: 2rem;
+    color: var(--text-color);
+    border: 1px solid var(--border);
 }
 
 .devotional-header {
@@ -722,10 +737,12 @@ footer {
 .devotional-form {
     max-width: 800px;
     margin: 2rem auto;
-    background-color: var(--white);
+    background-color: var(--card-bg);
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    color: var(--text-color);
+    border: 1px solid var(--border);
 }
 
 .form-group {
@@ -744,22 +761,24 @@ footer {
 .form-group select {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border);
     border-radius: 5px;
     font-size: 1rem;
     transition: border-color 0.3s ease;
+    background: #222;
+    color: #fff;
 }
 
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
-    border-color: var(--secondary-color);
     outline: none;
+    border-color: var(--accent);
 }
 
 .submit-btn {
-    background-color: var(--secondary-color);
-    color: var(--white);
+    background-color: var(--button-bg);
+    color: var(--button-text);
     padding: 1rem 2rem;
     border: none;
     border-radius: 5px;
@@ -770,7 +789,7 @@ footer {
 }
 
 .submit-btn:hover {
-    background-color: #2980b9;
+    background-color: var(--button-hover);
 }
 
 /* Share Buttons and Print Styles */
@@ -1169,4 +1188,14 @@ footer {
     .event-date .month {
         font-size: 1.2rem;
     }
+}
+
+/* Scrollbar for dark theme */
+::-webkit-scrollbar {
+    width: 10px;
+    background: #232526;
+}
+::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 5px;
 } 
