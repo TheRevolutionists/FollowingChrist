@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%; /* Ensure full height for percentage-based heights */
+}
+
 /* Global Color Scheme: Black & Greys with Pastel Accents */
 :root {
     --primary-bg: #18191a;
@@ -31,6 +35,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background: var(--primary-bg);
+    overflow-x: hidden; /* Prevent horizontal scrolling on mobile */
 }
 
 .container {
@@ -271,19 +276,28 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .main-header {
+        min-height: 60px; /* Ensure header has a minimum height on mobile */
+    }
+
+    body {
+        padding-top: 60px; /* Add padding to body to account for fixed header on mobile */
+    }
+
     .nav-links {
         position: fixed;
         top: 0;
         right: -100%;
         width: 80%;
         max-width: 300px;
-        height: 100vh;
+        height: 100%; /* Changed from 100vh for better mobile compatibility */
         background-color: var(--secondary-bg);
         flex-direction: column;
         align-items: flex-start;
         padding: 80px 2rem 2rem;
         transition: right 0.3s ease-in-out;
         box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+        overflow-y: auto; /* Allow vertical scrolling for menu content */
     }
 
     .nav-links.active {

@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Close menu on window resize if open
     window.addEventListener('resize', () => {
-        if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+        // Use matchMedia to align with CSS media queries for better responsiveness
+        if (window.matchMedia('(min-width: 769px)').matches && navLinks.classList.contains('active')) {
             toggleMenu();
         }
     });
